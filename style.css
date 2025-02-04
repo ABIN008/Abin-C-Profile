@@ -35,14 +35,6 @@ body {
     padding-right: 2rem;
 }
 
-.tag {
-    color: #00bd7e;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -68,10 +60,18 @@ h1 span, h2 span {
 
 .status-tag {
     background-color: #f5f5f5;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.2rem;
     border-radius: 20px;
     font-size: 0.9rem;
     color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.status-tag:hover {
+    transform: translateY(-2px);
 }
 
 /* Buttons */
@@ -83,11 +83,13 @@ h1 span, h2 span {
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .hire-button:hover {
     background-color: #00a36d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 189, 126, 0.2);
 }
 
 /* Profile Image */
@@ -95,6 +97,7 @@ h1 span, h2 span {
     position: relative;
     width: 300px;
     height: 300px;
+    flex-shrink: 0;
 }
 
 .triangle-frame {
@@ -118,12 +121,6 @@ h1 span, h2 span {
     margin-top: 2rem;
 }
 
-.trusted-companies h3 {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
 .company-logos {
     display: flex;
     gap: 2rem;
@@ -131,8 +128,63 @@ h1 span, h2 span {
     opacity: 0.5;
 }
 
-/* Common Section Styles */
-.about-section, .experience-section, .education-section, .contact-section {
+.company-logos span {
+    font-size: 1.2rem;
+    color: #666;
+    transition: opacity 0.3s;
+}
+
+.company-logos span:hover {
+    opacity: 0.8;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: #00bd7e;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Experience and Education Sections */
+.experience-section,
+.education-section {
     background-color: white;
     border-radius: 20px;
     padding: 3rem;
@@ -143,9 +195,9 @@ h1 span, h2 span {
 h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    color: #333;
 }
 
-/* Timeline Styles */
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -153,9 +205,14 @@ h2 {
 
 .timeline-item {
     position: relative;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
     border-left: 2px solid #00bd7e;
     padding-left: 2rem;
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
 }
 
 .timeline-item:last-child {
@@ -166,46 +223,109 @@ h2 {
     color: #00bd7e;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.timeline-date::before {
+    content: '';
+    position: absolute;
+    left: -2.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: #00bd7e;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.3s;
+}
+
+.timeline-item:hover .timeline-date::before {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 189, 126, 0.3);
+}
+
+.timeline-content {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .timeline-content h4 {
     color: #666;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Contact Section */
+.contact-section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .contact-info h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: #333;
 }
 
 .contact-details {
     margin-top: 2rem;
 }
 
-.contact-form .form-control {
+.contact-details p {
     margin-bottom: 1rem;
-    padding: 0.8rem;
+    color: #666;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form .form-control:focus {
+    outline: none;
+    border-color: #00bd7e;
+    box-shadow: 0 0 0 2px rgba(0, 189, 126, 0.1);
 }
 
 .contact-form textarea {
     resize: vertical;
+    min-height: 120px;
 }
 
-/* Footer Styles */
+/* Footer */
 .footer {
     background-color: #333;
     color: white;
@@ -222,7 +342,7 @@ h2 {
 
 .footer-social {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .social-link {
@@ -241,12 +361,16 @@ h2 {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
     .intro-section {
         flex-direction: column;
         text-align: center;
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
 
     .intro-content {
@@ -254,28 +378,117 @@ h2 {
         margin-bottom: 2rem;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
     .status-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .status-tag {
+        width: 100%;
+        max-width: 300px;
         justify-content: center;
+    }
+
+    .hire-button {
+        width: 100%;
+        max-width: 300px;
     }
 
     .image-container {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
         margin: 0 auto;
     }
 
-    .company-logos {
-        flex-wrap: wrap;
-        justify-content: center;
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .experience-section,
+    .education-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-date::before {
+        left: -1.75rem;
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    .timeline-content {
+        padding: 1.25rem;
     }
 
     .contact-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .company-logos {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
+    }
+
+    .timeline {
+        padding-left: 1.25rem;
+    }
+
+    .timeline-item {
+        padding-left: 1.25rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.3rem;
     }
 }
