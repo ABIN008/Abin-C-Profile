@@ -1,167 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abin C - Full Stack Developer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Banner Section -->
-        <section class="intro-section">
-            <div class="intro-content">
-                <h1><span>👋 Hi, I'm Abin C!</span><br>Full Stack Developer</h1>
-                <div class="description">
-                    I craft scalable and high-performance web applications using Angular, Node.js, GraphQL, and AWS. With 2+ years of experience in frontend and backend development, I build seamless user experiences and optimized system architectures.
-                </div>
-                <div class="status-tags">
-                    <span class="status-tag">
-                        <i class="fa-regular fa-envelope"></i>
-                        abinabhi916@gmail.com
-                    </span>
-                    <span class="status-tag">
-                        <i class="fa-solid fa-phone"></i>
-                        +91 9526220447
-                    </span>
-                </div>
-                <button class="hire-button">Download Resume</button>
-                <div class="trusted-companies">
-                    <div class="company-logos">
-                        <span>adobeco</span>
-                        <span>dulafix</span>
-                        <span>OCTOPUS</span>
-                        <span>dulalix</span>
-                        <span>OCTOP</span>
-                    </div>
-                </div>
+      <!-- Banner Section -->
+      <section class="intro-section">
+        <div class="intro-content">
+          <h1><span>👋 Hi, I'm Abin C!</span><br /></h1>
+          <h2>Full Stack Developer</h2>
+          <!-- <div class="description">
+            I craft scalable and high-performance web applications using
+            Angular, Node.js, GraphQL, and AWS. With 2+ years of experience in
+            frontend and backend development, I build seamless user experiences
+            and optimized system architectures.
+          </div> -->
+          <div class="status-tags">
+            <span class="status-tag">
+              <i class="fa-regular fa-envelope"></i>
+              abinabhi916@gmail.com
+            </span>
+            <span class="status-tag">
+              <i class="fa-solid fa-phone"></i>
+              +91 9526220447
+            </span>
+          </div>
+          <button class="hire-button">Download Resume</button>
+          <script>
+            document
+              .querySelector(".hire-button")
+              .addEventListener("click", function () {
+                const link = document.createElement("a");
+                link.href = "resume.pdf"; // Update this with the actual file name and path
+                link.download = "resume.pdf"; // This will be the downloaded file name
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              });
+          </script>
+          <div class="trusted-companies">
+            <div class="company-logos">
+              <span>adobeco</span>
+              <span>dulafix</span>
+              <span>OCTOPUS</span>
+              <span>dulalix</span>
+              <span>OCTOP</span>
             </div>
-            <div class="image-container">
-                <div class="triangle-frame"></div>
-                <img src="/api/placeholder/300/300" alt="Profile" class="profile-image">
-            </div>
-        </section>
+          </div>
+        </div>
+        <div class="image-container">
+          <div class="triangle-frame"></div>
+          <img
+            src="./assets/images/pic34.png"
+            alt="Profile"
+            class="profile-image"
+          />
+        </div>
+      </section>
 
-        <!-- Skills Section -->
-        <section class="skills-section">
-            <h2>Technical <span>Skills</span></h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fab fa-angular"></i>
-                    <h3>Angular</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Node.js</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-react"></i>
-                    <h3>React</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>MySQL</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-aws"></i>
-                    <h3>AWS</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>GraphQL</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
-                    <h3>Git</h3>
-                </div>
-            </div>
-        </section>
+      <!-- Skills Section -->
+      <section class="skills-section">
+        <h2>Technical <span>Skills</span></h2>
+        <div class="skills-container">
+          <div class="skill-card">
+            <i class="fab fa-angular"></i>
+            <h3>Angular</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-node-js"></i>
+            <h3>Node.js</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-react"></i>
+            <h3>React</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <h3>MySQL</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-aws"></i>
+            <h3>AWS</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>GraphQL</h3>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-git-alt"></i>
+            <h3>Git</h3>
+          </div>
+        </div>
+      </section>
 
-        <!-- Experience Section -->
-        <section class="experience-section">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">March 2023 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Junior Full Stack Developer</h3>
-                        <h4>S & H Ventures LLP, Kochi</h4>
-                        <p>Designed and developed key features for a project management tool using Angular, Node.js, GraphQL, and MySQL, enhancing data efficiency and maintainability. Conducted unit testing with documentation, optimized GraphQL queries for performance, and automated tasks to improve productivity.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2020 - 2022</div>
-                    <div class="timeline-content">
-                        <h3>Full Stack Developer Intern</h3>
-                        <h4>Beinex Consulting, Kochi</h4>
-                        <p>Designed and implemented end-to-end applications using Python, Django, Angular, and MySQL.</p>
-                    </div>
-                </div>
+      <!-- Experience Section -->
+      <section class="experience-section">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">March 2023 - Present</div>
+            <div class="timeline-content">
+              <h3>Junior Full Stack Developer</h3>
+              <h4>S & H Ventures LLP, Kochi</h4>
+              <p>
+                Designed and developed key features for a project management
+                tool using Angular, Node.js, GraphQL, and MySQL, enhancing data
+                efficiency and maintainability. Conducted unit testing with
+                documentation, optimized GraphQL queries for performance, and
+                automated tasks to improve productivity.
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2020 - 2022</div>
+            <div class="timeline-content">
+              <h3>Full Stack Developer Intern</h3>
+              <h4>Beinex Consulting, Kochi</h4>
+              <p>
+                Designed and implemented end-to-end applications using Python,
+                Django, Angular, and MySQL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Education Section -->
-        <section class="education-section">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2017 - 2020</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <h4>University of Calicut</h4>
-                        <p>Major in Software Engineering with focus on web technologies and distributed systems.</p>
-                    </div>
-                </div>
+      <!-- Education Section -->
+      <section class="education-section">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2017 - 2020</div>
+            <div class="timeline-content">
+              <h3>Bachelor of Science in Computer Science</h3>
+              <h4>University of Calicut</h4>
+              <p>
+                Major in Software Engineering with focus on web technologies and
+                distributed systems.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h2>Contact <span>Me</span></h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                    <div class="contact-details">
-                        <p><strong>Email:</strong> abinabhi916@gmail.com</p>
-                        <p><strong>Phone:</strong> +91 9526220447</p>
-                        <p><strong>Location:</strong> Kochi, India</p>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" class="form-control" placeholder="Your Name" required>
-                    <input type="email" class="form-control" placeholder="Your Email" required>
-                    <input type="text" class="form-control" placeholder="Subject" required>
-                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="hire-button">Send Message</button>
-                </form>
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <h2>Contact <span>Me</span></h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>
+              I'm always open to discussing new projects, creative ideas or
+              opportunities to be part of your visions.
+            </p>
+            <div class="contact-details">
+              <p><strong>Email:</strong> abinabhi916@gmail.com</p>
+              <p><strong>Phone:</strong> +91 9526220447</p>
+              <p><strong>Location:</strong> Kochi, India</p>
             </div>
-        </section>
+          </div>
+          <form class="contact-form">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Your Email"
+              required
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Subject"
+              required
+            />
+            <textarea
+              class="form-control"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="hire-button">Send Message</button>
+          </form>
+        </div>
+      </section>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Abin C</h3>
-                    <p>Full Stack Developer</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#" class="social-link">LinkedIn</a>
-                    <a href="#" class="social-link">GitHub</a>
-                    <a href="#" class="social-link">Twitter</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Abin C. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>Abin C</h3>
+            <p>Full Stack Developer</p>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">GitHub</a>
+            <a href="#" class="social-link">Twitter</a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Abin C. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
