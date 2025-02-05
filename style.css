@@ -26,11 +26,11 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    background-color: rgb(250, 246, 246);
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     border-radius: 6px;
-    margin-top: 10px; /* Add some space from the top if needed */
+    margin-top: 10px;
 }
 
 .nav-container {
